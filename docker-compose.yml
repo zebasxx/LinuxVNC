@@ -1,8 +1,6 @@
-version: '3.8'
-
 services:
   desktop-vnc:
-    image: elestio/docker-desktop-vnc:latest
+    build: .      
     ports:
       - "6081:80"
       - "5900:5900"
@@ -10,4 +8,5 @@ services:
       - config/vnc_config.env
     volumes:
       - "./persistance/:/home/seba/persistance"
+      - "./Desktop/:/home/seba/Desktop"
 
