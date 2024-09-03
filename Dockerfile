@@ -25,5 +25,7 @@ RUN wget "https://go.microsoft.com/fwlink/?linkid=2282287" -O azuredatastudio.de
 RUN apt install -y python3 python3-pip python3-pandas python3-openpyxl python3-numpy python3-requests
 RUN python3 -m pip install Office365-REST-Python-Client pyarrow
 
+RUN apt install -y nano gimp sqlitebrowser
+
 # Cleanup
 RUN apt-get clean && apt-get autoremove
